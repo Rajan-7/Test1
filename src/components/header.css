@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --font-color: #fff;
+}
+
+/*? Header section start */
+
+.header-section .nav-container {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.header-section .center-content {
+  position: absolute;
+  height: 60rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 2.4rem;
+}
+
+.header-section .center-content img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.logo-section {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container .nav-bars ul li {
+  list-style: none;
+}
+
+.nav-container .nav-bars ul li a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.nav-container .nav-bars {
+  position: relative;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.2rem;
+  z-index: 2;
+}
+
+.nav-container .nav-bars .hover-effectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.2rem;
+}
+
+.display-product a ,
+.display-company a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.display-product{
+    color:var(--font-color);
+    display: inline-block;
+    position: relative;
+}
+
+.drop-down--product{
+    display: none;
+    position: absolute;
+    min-width: 25rem;
+
+    & a{
+        display: flex;
+    }
+}
+
+.display-product:hover .drop-down--product{
+    display: block;
+}
+
+.display-company{
+    color: var(--font-color);
+    display: inline-block;
+    position: relative;
+}
+
+.drop-down--company{
+    display: none;
+    position: absolute;
+    min-width: 25rem;
+
+    & a{
+        display: flex;
+    }
+}
+
+.display-company:hover .drop-down--company{
+    display: block;
+}
+
+/* Header section end */
