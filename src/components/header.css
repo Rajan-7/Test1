@@ -17,6 +17,7 @@ body {
 /*? Header section start */
 
 .header-section .nav-container {
+  /* position:fixed; */
   display: flex;
   justify-content: space-around;
   cursor: pointer;
@@ -72,6 +73,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5.2rem;
+  margin: 0rem 2rem;
 }
 
 .display-product a ,
@@ -102,7 +104,7 @@ body {
 
 .display-company{
     color: var(--font-color);
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
 }
 
@@ -118,6 +120,23 @@ body {
 
 .display-company:hover .drop-down--company{
     display: block;
+}
+
+.hover-effect--background{
+  position: absolute;
+  /* z-index: -3; */
+  height: 27rem;
+  width: 100vw;
+  top:0;
+  left: 0;
+  background-color: rgb(163, 135, 135);
+  /* display: none; */
+}
+
+.none{
+  height: 0rem;
+  width: 0rem;
+  display: none;
 }
 
 /* Header section end */
