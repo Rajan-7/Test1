@@ -18,6 +18,7 @@ body {
 
 .header-section .nav-container {
   /* position:fixed; */
+  padding-top: 2rem;
   display: flex;
   justify-content: space-around;
   cursor: pointer;
@@ -56,6 +57,10 @@ body {
 .nav-container .nav-bars ul li a {
   text-decoration: none;
   color: var(--font-color);
+
+  &:hover {
+    color: red;
+  }
 }
 
 .nav-container .nav-bars {
@@ -76,67 +81,84 @@ body {
   margin: 0rem 2rem;
 }
 
-.display-product a ,
+.display-product a,
 .display-company a {
   color: var(--font-color);
   text-decoration: none;
 }
 
-.display-product{
-    color:var(--font-color);
-    display: inline-block;
-    position: relative;
+.display-product {
+  color: var(--font-color);
+  display: inline-block;
+  position: relative;
+  &:hover {
+    color: red;
+  }
 }
 
-.drop-down--product{
-    display: none;
-    position: absolute;
-    min-width: 25rem;
+.drop-down--product {
+  display: none;
+  position: absolute;
+  min-width: 25rem;
 
-    & a{
-        display: flex;
+  & a {
+    display: flex;
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
     }
+  }
 }
 
-.display-product:hover .drop-down--product{
-    display: block;
+.display-product:hover .drop-down--product {
+  display: block;
 }
 
-.display-company{
-    color: var(--font-color);
-    /* display: inline-block; */
-    position: relative;
+.display-company {
+  color: var(--font-color);
+  /* display: inline-block; */
+  position: relative;
+  &:hover {
+    color: red;
+  }
 }
 
-.drop-down--company{
-    display: none;
-    position: absolute;
-    min-width: 25rem;
+.drop-down--company {
+  display: none;
+  position: absolute;
+  min-width: 25rem;
 
-    & a{
-        display: flex;
+  & a {
+    display: flex;
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
     }
+  }
 }
 
-.display-company:hover .drop-down--company{
-    display: block;
+.display-company:hover .drop-down--company {
+  display: block;
 }
 
-.hover-effect--background{
+.hover-effect--background {
   position: absolute;
   /* z-index: -3; */
   height: 27rem;
   width: 100vw;
-  top:0;
+  top: 0;
   left: 0;
-  background-color: rgb(163, 135, 135);
+  background-color: #4CB9E7;
   /* display: none; */
 }
 
-.none{
+.none {
   height: 0rem;
   width: 0rem;
   display: none;
+}
+
+.logo-section img {
+  height: 13rem;
+  width: 12rem;
 }
 
 /* Header section end */
