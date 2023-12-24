@@ -1,13 +1,115 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: "Urbanist";
+body {
+  font-family: "Urbanist";
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
+.logo-section h2 {
+  font-size: 2.4rem;
+}
+
+.nav-container {
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 10rem 1fr 2fr 10rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.logo-section {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-menus {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menus ul {
+  display: flex;
+  gap: 10rem;
+}
+
+.nav-menus ul li {
+  list-style: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.nav-menus ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.hero-section {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section p {
+  font-size: 2.4rem;
+  color: #7bd3ea;
+}
+.hero-section h2 {
+  font-size: 3.6rem;
+  color: #0766ad;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* Responsive  */
+@media (max-width: 1080px) {
+  .nav-container {
+    height: 8rem;
+    grid-template-columns: 2rem 3fr 3fr 2rem;
+  }
+  .logo-section,
+  .nav-menus ul {
+    height: 8rem;
+  }
+  .nav-menus ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 998px) {
+  .nav-container {
+    height: 7rem;
+    grid-template-columns: 5rem 3fr 3fr 1rem;
+  }
+  .nav-menus {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-menus ul {
+    display: none;
+  }
+
+  .nav-menus .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  .mobile-nav{
+    display: flex;
+  }
+}

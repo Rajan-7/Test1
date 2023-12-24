@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import "./navbar.css";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-const Response = () => {
+const NavBar = () => {
+  const [show, setShow] = useState(false);
   return (
     <>
       <header>
         <div className="nav-container">
           <div className="logo-section">
-            <h2>Rj7</h2>
+            <h2>RjnSeven</h2>
           </div>
-          <div className="nav-menus">
+          <div className="nav-menus mobile-nav">
             <ul>
               <li>
                 <a href="/">Home</a>
@@ -23,14 +26,20 @@ const Response = () => {
                 <a href="/">Contact</a>
               </li>
             </ul>
+            <div className="hamburger-menu">
+              <a href="/" onClick="()=>setShow(!show)">
+                <GiHamburgerMenu />
+              </a>
+            </div>
           </div>
         </div>
       </header>
       <section className="hero-section">
-        <img src="" alt="" />
+        <p>Welcome to</p>
+        <h2>RJ Kingdom</h2>
       </section>
     </>
   );
 };
 
-export default Response;
+export default NavBar;
