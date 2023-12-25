@@ -3,7 +3,7 @@ import "./navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = () => {
-  const [show, setShow] = useState(false);
+  const [showMobile, setShowMobile] = useState(false);
   return (
     <>
       <header>
@@ -11,7 +11,7 @@ const NavBar = () => {
           <div className="logo-section">
             <h2>RjnSeven</h2>
           </div>
-          <div className="nav-menus mobile-nav">
+          <div className={showMobile ? "nav-menus " : "mobile-nav"}>
             <ul>
               <li>
                 <a href="/">Home</a>
@@ -27,7 +27,7 @@ const NavBar = () => {
               </li>
             </ul>
             <div className="hamburger-menu">
-              <a href="/" onClick="()=>setShow(!show)">
+              <a href="/" onClick="()=>setShowMobile(!showMobile)">
                 <GiHamburgerMenu />
               </a>
             </div>
@@ -36,7 +36,7 @@ const NavBar = () => {
       </header>
       <section className="hero-section">
         <p>Welcome to</p>
-        <h2>RJ Kingdom</h2>
+        <h2>Coding Kingdom</h2>
       </section>
     </>
   );
